@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Agrosoft ayuda a agricultores peruanos a detectar plagas, gestionar plaguicidas y trabajar con seguridad."
+    />
+    <title>Agrosoft | Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital@1&family=Nunito:wght@400;700;800;900&family=Roboto:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- A11y: skip link para usuarios de teclado y lector de pantalla. -->
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <nav class="navbar" aria-label="Navegación principal">
+          <a class="brand" href="#hero" aria-label="Agrosoft, ir al inicio">
+            <span class="brand__icon" aria-hidden="true">◆</span>
+            <span class="brand__name">AgroSoft</span>
+          </a>
+
+          <button
+            class="navbar__toggle"
+            type="button"
+            id="menuToggle"
+            aria-label="Abrir menú"
+            aria-controls="primaryMenu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="navbar__menu" id="primaryMenu">
+            <ul class="navbar__links">
+              <li><a class="is-active" href="#hero">Inicio</a></li>
+              <li><a href="#how-it-works">Cómo funciona</a></li>
+              <li><a href="#about">Nosotros</a></li>
+              <li><a href="#contact">Contacto</a></li>
+            </ul>
+
+            <a class="button button--login" href="#contact">Iniciar Sesión</a>
+          </div>
+        </nav>
+      </header>
+
+      <main id="main-content">
+        <section class="hero" id="hero" aria-labelledby="heroTitle">
+          <div class="hero__copy">
+            <h1 id="heroTitle">
+              Detecta plagas y gestiona plaguicidas de forma segura
+            </h1>
+            <p>
+              Optimiza tu cosecha con inteligencia artificial y guías expertas
+              directo en el campo. La tecnología del futuro al servicio del
+              agricultor peruano.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#scan-demo"
+                >Comenzar gratis <span aria-hidden="true">→</span></a
+              >
+            </div>
+            <div class="trust-row" aria-label="Confianza de agricultores">
+              <div class="trust-row__avatars" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <p>Más de 500 agricultores ya confían en nosotros</p>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Vista previa de AgroData">
+            <div class="hero-card__signal" aria-hidden="true"></div>
+            <div class="hero-card__farmer" aria-hidden="true">
+              <span class="hero-card__head"></span>
+              <span class="hero-card__body"></span>
+            </div>
+            <p class="hero-card__brand">
+              AgroData <span aria-hidden="true">✦</span> F
+            </p>
+            <button class="hero-card__badge" type="button" id="offlineToggle">
+              SAFE WORK?
+            </button>
+            <p class="hero-card__status" id="offlineStatus" aria-live="polite">
+              Modo offline listo
+            </p>
+          </div>
+        </section>
+
+        <section
+          class="process-section"
+          id="how-it-works"
+          aria-labelledby="processTitle"
+        >
+          <div class="section-heading">
+            <h2 id="processTitle">Cómo funciona</h2>
+            <span aria-hidden="true"></span>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-card">
+              <span class="process-card__number">1</span>
+              <span class="process-card__icon" aria-hidden="true">◎</span>
+              <h3>Escanea tu cultivo</h3>
+              <p>
+                Simplemente toma una fotografía del área afectada de tu planta
+                con la cámara de tu celular.
+              </p>
+            </article>
+            <article class="process-card">
+              <span class="process-card__number">2</span>
+              <span class="process-card__icon" aria-hidden="true">◎</span>
+              <h3>Recibe el diagnóstico</h3>
+              <p>
+                Nuestra IA avanzada identifica la plaga al instante con un alto
+                nivel de precisión.
+              </p>
+            </article>
+            <article class="process-card">
+              <span class="process-card__number">3</span>
+              <span class="process-card__icon" aria-hidden="true">◎</span>
+              <h3>Aplica el tratamiento</h3>
+              <p>
+                Obtén dosis seguras y alertas críticas sobre productos
+                prohibidos para proteger tu salud.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section
+          class="features-section"
+          id="features"
+          aria-labelledby="featuresTitle"
+        >
+          <div class="section-heading">
+            <h2 id="featuresTitle">
+              Todo lo que necesitas para cuidar tu cultivo
+            </h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-card__icon" aria-hidden="true">⌁</span>
+              <div>
+                <h3>Escaneo IA</h3>
+                <p>
+                  Detección temprana de enfermedades y plagas mediante modelos
+                  de visión artificial entrenados localmente.
+                </p>
+              </div>
+            </article>
+            <article class="feature-card">
+              <span class="feature-card__icon" aria-hidden="true">⚗</span>
+              <div>
+                <h3>Gestión de plaguicidas</h3>
+                <p>
+                  Recomendaciones precisas basadas en normativas de seguridad
+                  sanitaria para evitar intoxicaciones.
+                </p>
+              </div>
+            </article>
+            <article class="feature-card">
+              <span class="feature-card__icon" aria-hidden="true">☑</span>
+              <div>
+                <h3>Inventario digital</h3>
+                <p>
+                  Control total de tus insumos, fechas de vencimiento y
+                  registros de aplicación históricos.
+                </p>
+              </div>
+            </article>
+            <article class="feature-card">
+              <span class="feature-card__icon" aria-hidden="true">▣</span>
+              <div>
+                <h3>Salud del agricultor</h3>
+                <p>
+                  Protocolos de seguridad personalizados y alertas de tiempo de
+                  reingreso al campo tratado.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="team-section" id="about" aria-labelledby="teamTitle">
+          <div class="section-heading">
+            <h2 id="teamTitle">Nuestro Equipo</h2>
+            <p>Expertos dedicados a revolucionar el campo</p>
+          </div>
+
+          <div class="team-grid">
+            <article class="team-card">
+              <div
+                class="team-card__photo team-card__photo--one"
+                role="img"
+                aria-label="Foto de Mathias Sanchez"
+              ></div>
+              <h3>Mathias Sanchez</h3>
+              <p>Ing. Software</p>
+            </article>
+            <article class="team-card">
+              <div
+                class="team-card__photo team-card__photo--two"
+                role="img"
+                aria-label="Foto de German Cubas"
+              ></div>
+              <h3>German Cubas</h3>
+              <p>Ing. Sistemas</p>
+            </article>
+            <article class="team-card">
+              <div
+                class="team-card__photo team-card__photo--three"
+                role="img"
+                aria-label="Foto de Carlos Blancas"
+              ></div>
+              <h3>Carlos Blancas</h3>
+              <p>Ing. Software</p>
+            </article>
+            <article class="team-card">
+              <div
+                class="team-card__photo team-card__photo--four"
+                role="img"
+                aria-label="Foto de Fabrizzio Yacca"
+              ></div>
+              <h3>Fabrizzio Yacca</h3>
+              <p>Ing. Sistemas</p>
+            </article>
+            <article class="team-card">
+              <div
+                class="team-card__photo team-card__photo--five"
+                role="img"
+                aria-label="Foto de Maria Valdivia"
+              ></div>
+              <h3>Maria Valdivia</h3>
+              <p>Ing. Software</p>
+            </article>
+            <article class="team-card">
+              <div
+                class="team-card__photo team-card__photo--six"
+                role="img"
+                aria-label="Foto de Enrique Villón"
+              ></div>
+              <h3>Enrique Villón</h3>
+              <p>Ing. Software</p>
+            </article>
+          </div>
+        </section>
+
+        <section
+          class="testimonials-section"
+          aria-labelledby="testimonialsTitle"
+        >
+          <div class="section-heading">
+            <h2 id="testimonialsTitle">Testimonios</h2>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <p>
+                “AgroSoft ha transformado la manera en que manejamos nuestras
+                hectáreas de maíz. La detección de plagas es inmediata y nos ha
+                ahorrado miles en plaguicidas mal aplicados.”
+              </p>
+              <div class="testimonial-card__author">
+                <span aria-hidden="true"></span>
+                <div>
+                  <strong>Jorge Ramirez</strong>
+                  <small>Valle del Mantaro, Perú</small>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <p>
+                “La seguridad de mis trabajadores es lo más importante. Gracias
+                a las guías de EPP de la app, hemos reducido los incidentes por
+                contacto químico a cero.”
+              </p>
+              <div class="testimonial-card__author">
+                <span aria-hidden="true"></span>
+                <div>
+                  <strong>Elena Castañeda</strong>
+                  <small>Ica, Perú</small>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section
+          class="contact-section"
+          id="contact"
+          aria-labelledby="contactTitle"
+        >
+          <div class="contact-section__copy">
+            <h2 id="contactTitle">Contáctanos</h2>
+            <p>¿Tienes dudas sobre cómo implementar AgroSoft en tu campo?</p>
+            <p>Nuestro equipo técnico está listo para asesorarte.</p>
+          </div>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <!-- A11y: labels asociados, errores por campo y aria-live para éxito. -->
+            <div class="form-field">
+              <label for="name">Nombre completo</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                placeholder="Ej. Juan Pérez"
+                required
+              />
+              <p class="form-field__error" id="nameError"></p>
+            </div>
+            <div class="form-field">
+              <label for="email">Correo electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="correo@ejemplo.com"
+                required
+              />
+              <p class="form-field__error" id="emailError"></p>
+            </div>
+            <div class="form-field">
+              <label for="message">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Escribe tu consulta aquí..."
+                required
+              ></textarea>
+              <p class="form-field__error" id="messageError"></p>
+            </div>
+            <button class="button button--submit" type="submit">
+              Enviar mensaje
+            </button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__content">
+          <div class="site-footer__brand">
+            <strong>AgroData</strong>
+            <p>© 2026 Agrosoft. Todos los derechos reservados.</p>
+          </div>
+
+          <nav class="site-footer__nav" aria-label="Navegación de pie de página">
+            <a href="#hero">Inicio</a>
+            <a href="#how-it-works">Cómo funciona</a>
+            <a href="#about">Nosotros</a>
+            <a href="#contact">Contacto</a>
+            <a href="#privacy" id="privacy">Privacidad</a>
+            <a href="#terms" id="terms">Términos</a>
+          </nav>
+
+          <div class="site-footer__icons" aria-label="Acciones externas">
+            <a href="#hero" aria-label="Cambiar idioma o sitio web">
+              <span aria-hidden="true">◎</span>
+            </a>
+            <a href="#contact" aria-label="Compartir AgroData">
+              <span aria-hidden="true">⌯</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
