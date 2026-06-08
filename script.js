@@ -1,10 +1,7 @@
 const menuToggle = document.querySelector("#menuToggle");
 const primaryMenu = document.querySelector("#primaryMenu");
-const contrastToggle = document.querySelector("#contrastToggle");
 const offlineToggle = document.querySelector("#offlineToggle");
 const offlineStatus = document.querySelector("#offlineStatus");
-const scanButton = document.querySelector("#scanButton");
-const scanResult = document.querySelector("#scanResult");
 const contactForm = document.querySelector("#contactForm");
 const formStatus = document.querySelector("#formStatus");
 
@@ -39,13 +36,6 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-if (contrastToggle) {
-  contrastToggle.addEventListener("click", () => {
-    const isHighContrast = document.body.classList.toggle("is-high-contrast");
-    contrastToggle.textContent = isHighContrast ? "Contraste normal" : "Alto contraste";
-  });
-}
-
 offlineToggle.addEventListener("click", () => {
   const isOnline = offlineToggle.dataset.status === "online";
 
@@ -54,24 +44,6 @@ offlineToggle.addEventListener("click", () => {
     ? "Modo offline listo"
     : "Conexión activa";
   offlineToggle.textContent = isOnline ? "SAFE WORK?" : "ONLINE";
-});
-
-// Heurística de Nielsen: muestra estado del sistema antes del resultado simulado.
-scanButton.addEventListener("click", () => {
-  scanButton.disabled = true;
-  scanButton.textContent = "Analizando imagen...";
-  scanResult.innerHTML = "<p><strong>Estado:</strong> Analizando imagen del cultivo...</p>";
-
-  window.setTimeout(() => {
-    scanResult.innerHTML = `
-      <p class="scan-result__severity"><span aria-hidden="true">!</span> Severidad media</p>
-      <h3>Diagnóstico simulado: posible mancha foliar</h3>
-      <p><strong>Recomendación:</strong> separa hojas afectadas, mejora ventilación y consulta un producto autorizado.</p>
-      <p><strong>Advertencia de seguridad:</strong> usa guantes, mascarilla y evita aplicar plaguicidas sin revisar la etiqueta.</p>
-    `;
-    scanButton.disabled = false;
-    scanButton.textContent = "Escanear cultivo";
-  }, 1400);
 });
 
 function showFieldError(field, message) {
