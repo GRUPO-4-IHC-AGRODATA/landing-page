@@ -624,8 +624,7 @@ textarea {
 
 .features-section {
   width: min(100% - var(--section-gutter), var(--section-width));
-  margin: 0 auto;
-  padding: 36px 0 34px;
+  margin: 44px auto;
 }
 
 .feature-grid {
