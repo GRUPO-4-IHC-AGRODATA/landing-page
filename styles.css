@@ -71,6 +71,7 @@ h3 {
 button, input, textarea { font: inherit; }
 :focus-visible { outline: none; box-shadow: var(--focus-ring); }
 
+/* ── SKIP LINK ── */
 .skip-link {
   position: fixed; top: var(--sp-md); left: var(--sp-md); z-index: 200;
   transform: translateY(-200%); padding: var(--sp-sm) var(--sp-md);
@@ -80,8 +81,10 @@ button, input, textarea { font: inherit; }
 }
 .skip-link:focus { transform: translateY(0); }
 
+/* ── PAGE SHELL ── */
 .page-shell { width: 100%; margin: 0 auto; background: var(--color-white); }
 
+/* ── HEADER ── */
 .site-header {
   position: sticky; top: 0; z-index: 100;
   background: rgba(255,255,255,0.95);
@@ -134,6 +137,7 @@ button, input, textarea { font: inherit; }
 .navbar__links a:hover::after, .navbar__links a.is-active::after { transform: scaleX(1); }
 .navbar__links a.is-active { color: var(--color-green-primary); }
 
+/* ── BUTTONS ── */
 .button {
   min-height: 44px; display: inline-flex; align-items: center;
   justify-content: center; gap: var(--sp-sm);
@@ -155,6 +159,7 @@ button, input, textarea { font: inherit; }
 .button--outline:hover { background: var(--color-green-dark); color: var(--color-white); }
 .button--submit { width: 100%; font-size: 16px; padding: var(--sp-sm) 0; }
 
+/* ── ANIMACIONES ── */
 .fade-in {
   opacity: 0; transform: translateY(24px);
   animation: fadeUp 0.7s ease forwards;
@@ -173,6 +178,7 @@ button, input, textarea { font: inherit; }
 .reveal--delay-1 { transition-delay: 0.15s; }
 .reveal--delay-2 { transition-delay: 0.3s; }
 
+/* ── HERO ── */
 .hero {
   width: min(100% - 32px, 960px);
   min-height: 420px; margin: 0 auto;
@@ -215,6 +221,7 @@ button, input, textarea { font: inherit; }
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 .hero__image img:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 32px 64px rgba(10,67,39,0.22); }
+
 /* ── STATS BAR ── */
 .stats-bar {
   display: grid; grid-template-columns: repeat(4, 1fr);
@@ -476,4 +483,3 @@ button, input, textarea { font: inherit; }
 .site-footer__icons i { font-size: 20px; }
 .hero__badge i { margin-right: 4px; }
 .modal__badges i { margin-right: 4px; }
-
