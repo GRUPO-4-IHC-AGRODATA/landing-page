@@ -145,7 +145,7 @@ contactForm.addEventListener("submit", e => {
 
   setTimeout(() => {
     contactForm.reset();
-    formStatus.textContent = "Mensaje enviado. Gracias por contactar a Agrosoft";
+    formStatus.textContent = "✅ Mensaje enviado. Gracias por contactar a Agrosoft.";
     btn.textContent = "Enviar mensaje →";
     btn.disabled = false;
   }, 1200);
