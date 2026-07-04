@@ -1,4 +1,3 @@
-// ── ELEMENTOS ──
 const menuToggle = document.querySelector("#menuToggle");
 const primaryMenu = document.querySelector("#primaryMenu");
 const contactForm = document.querySelector("#contactForm");
@@ -14,15 +13,20 @@ function closeModal() { downloadModal.classList.remove("open"); document.body.st
 document.querySelector("#openModal")?.addEventListener("click", openModal);
 document.querySelector("#openModal2")?.addEventListener("click", openModal);
 document.querySelector("#modalClose")?.addEventListener("click", closeModal);
-downloadModal?.addEventListener("click", (e) => { if (e.target === downloadModal) closeModal(); });
+
+// Solo cierra al clickear el FONDO del modal, no el contenido
+downloadModal?.addEventListener("click", (e) => {
+  if (e.target === downloadModal) closeModal();
+});
+
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
 
-// ── HEADER SCROLL SHADOW ──
+//header scroll
 window.addEventListener("scroll", () => {
   siteHeader.classList.toggle("scrolled", window.scrollY > 20);
 }, { passive: true });
 
-// ── NAVBAR ACTIVO POR SCROLL ──
+// navvar activo scroll 
 const sections = document.querySelectorAll("section[id]");
 
 function onScroll() {
@@ -40,17 +44,20 @@ function onScroll() {
 
 window.addEventListener("scroll", onScroll, { passive: true });
 
-// ── MENÚ HAMBURGUESA ──
+// ── Menu hamburgueza ──
 menuToggle.addEventListener("click", () => {
   const isOpen = primaryMenu.classList.toggle("is-open");
   menuToggle.setAttribute("aria-expanded", String(isOpen));
   menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
 });
 
-// ── SCROLL SUAVE ──
+
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener("click", e => {
-    const target = document.querySelector(link.getAttribute("href"));
+    const href = link.getAttribute("href");
+    // Si el href es solo "#" o no existe el elemento, no hacer nada
+    if (!href || href === "#") return;
+    const target = document.querySelector(href);
     if (!target) return;
     e.preventDefault();
     target.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -62,7 +69,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-// ── REVEAL ON SCROLL ──
+
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -145,7 +152,7 @@ contactForm.addEventListener("submit", e => {
 
   setTimeout(() => {
     contactForm.reset();
-    formStatus.textContent = "✅ Mensaje enviado. Gracias por contactar a Agrosoft.";
+    formStatus.textContent = "Mensaje enviado,gracias por contactar a Agrosoft";
     btn.textContent = "Enviar mensaje →";
     btn.disabled = false;
   }, 1200);
