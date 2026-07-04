@@ -14,9 +14,9 @@ document.querySelector("#openModal")?.addEventListener("click", openModal);
 document.querySelector("#openModal2")?.addEventListener("click", openModal);
 document.querySelector("#modalClose")?.addEventListener("click", closeModal);
 
-// Solo cierra al clickear el FONDO del modal, no el contenido
 downloadModal?.addEventListener("click", (e) => {
   if (e.target === downloadModal) closeModal();
+  e.stopPropagation();
 });
 
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
